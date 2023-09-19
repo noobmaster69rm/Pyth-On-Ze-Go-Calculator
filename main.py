@@ -519,22 +519,6 @@ class Calculator:
         self.recall = self.recall + ' ' + self.expression
 
     # Creating Threads to run functions simultaneously
-    def threading_functions(self):
-        thread_10 = threading.Thread(target=self.button_equal())
-        thread_20 = threading.Thread(target=self.button_clear_all())
-        thread_30 = threading.Thread(target=self.delete_button())
-        thread_40 = threading.Thread(target=self.change_signs())
-        thread_50 = threading.Thread(target=self.convert_deg())
-        thread_60 = threading.Thread(target=self.convert_rad())
-        thread_70 = threading.Thread(target=self.memory_clear())
-        thread_80 = threading.Thread(target=self._answer())
-
-        threads = [thread_10, thread_20, thread_30, thread_40, thread_50, thread_60, thread_70, thread_80]
-
-        for i in threads:
-            i.start()
-            i.join()
-
 
 def create_gui():
     cal = tk.Tk()
